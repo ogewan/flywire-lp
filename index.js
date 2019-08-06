@@ -1,28 +1,64 @@
-/*var slideIndex = 1;
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function () { myFunction() };
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function fwrd() {
+  showSlides(slideIndex++);
 }
 
+// Next/previous controls
+function back() {
+  showSlides(slideIndex--);
+}
+
+
 // Thumbnail image controls
-function currentSlide(n) {
+function slide(n) {
   showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1} 
-  if (n < 1) {slideIndex = slides.length}
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n >= slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none"; 
+    slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block"; 
-  dots[slideIndex-1].className += " active";
-}*/
+  slides[slideIndex - 1].style.display = "block";
+  //dots[slideIndex - 1].className += " active";
+  //captionText.innerHTML = dots[slideIndex - 1].alt;
+}
