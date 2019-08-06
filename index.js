@@ -1,29 +1,30 @@
-// When the user scrolls the page, execute myFunction 
-window.onscroll = function () { myFunction() };
+const comp = {
+  sticky: {
+    header: document.getElementById('myHeader'),
+  },
+  fs_banner: {},
+  lightbox: {
+      index: 1,
+      open: () => {
+        document.getElementById('myModal').style.display = 'block';
+      },
+      close: () => {
+        document.getElementById('myModal').style.display = 'none';
+      },
+      show: (n) => {
+           
+      }
+  },
+};
 
-// Get the header
-var header = document.getElementById("myHeader");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-
-// Open the Modal
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
-
-// Close the Modal
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
+// When the user scrolls the page, execute myFunction
+window.onscroll = () => {
+    const header = comp.sticky.header;
+    if (window.pageYOffset > header.offsetTop) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
 }
 
 var slideIndex = 1;
@@ -47,18 +48,22 @@ function slide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n >= slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+  var slides = document.getElementsByClassName('mySlides');
+  var dots = document.getElementsByClassName('demo');
+  var captionText = document.getElementById('caption');
+  if (n >= slides.length) {
+    slideIndex = 1
+  }
+  if (n < 1) {
+    slideIndex = slides.length
+  }
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = 'none';
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(' active', '');
   }
-  slides[slideIndex - 1].style.display = "block";
-  //dots[slideIndex - 1].className += " active";
-  //captionText.innerHTML = dots[slideIndex - 1].alt;
+  slides[slideIndex - 1].style.display = 'block';
+  // dots[slideIndex - 1].className += " active";
+  // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
