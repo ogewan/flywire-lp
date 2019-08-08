@@ -1,3 +1,10 @@
+#logo {
+    font-size: 120px;
+    font-family: courier new;
+    position: absolute;
+    /* display: none; */
+}
+
 /**STICKY HEADER**/
 /* Style the header */
 .header {
@@ -27,7 +34,7 @@
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
-  padding-top: 102px;
+  padding-top: 124px;
 }
 /**MODAL**/
 /* The Modal (background) */
@@ -47,11 +54,11 @@
 /* Modal Content */
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: black;
   margin: auto;
   padding: 0;
   width: 90%;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
 }
 
 /* The Close Button */
@@ -71,11 +78,17 @@
   cursor: pointer;
 }
 
+.b-slide.active {
+    display: block;
+}
 /* Hide the slides by default */
 .mySlides, .b-slide {
   display: none;
 }
 
+.numbertext {
+    background: black;
+}
 /* Next & previous buttons */
 .prev,
 .next {

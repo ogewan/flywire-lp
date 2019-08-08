@@ -1,31 +1,47 @@
 const comp = {
   sticky: {
     header: document.getElementById('myHeader'),
+    banner: document.getElementById('banner')
   },
   fs_banner: {},
   lightbox: {
-      index: 1,
-      open: () => {
-        document.getElementById('myModal').style.display = 'block';
-      },
-      close: () => {
-        document.getElementById('myModal').style.display = 'none';
-      },
-      show: (n) => {
-           
-      }
+    index: 1,
+    open: () => {
+      document.getElementById('myModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    },
+    close: () => {
+      document.getElementById('myModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    },
+    next: () => this.show(this.index++),
+    prev: () => this.show(this.index--),
+    show: (n) => {
+      const
+        slides = document.getElementsByClassName('mySlides'),
+        max = slides.length;
+
+        if (!n) { n = max; }
+        else {n = n % max; }
+        this.index = n;
+
+        document.querySelector('.mySlides.active').classList.remove('active');
+        slides[n--].classList.add('active');
+    }
   },
 };
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = () => {
-    const header = comp.sticky.header;
-    if (window.pageYOffset > header.offsetTop) {
+window.onscroll =
+    () => {
+      const header = comp.sticky.header;
+      const bannerPos = comp.sticky.banner.getBoundingClientRect().bottom;
+      if (bannerPos < 0) {
         header.classList.add('sticky');
-    } else {
+      } else {
         header.classList.remove('sticky');
+      }
     }
-}
 
 var slideIndex = 1;
 showSlides(slideIndex);
