@@ -11,10 +11,10 @@
     <link rel="manifest" href="f/site.webmanifest">
 </head>
 
-<body style='margin: 0px; background: black; color: white'>
-    <div id='banner' style="overflow: hidden; height: 100vh; width: 100%">
+<body style='margin: 0px; background:black; color: white'>
+    <div id='banner'>
         <div id='logo'>
-            <img src="ng/fwfake.png">FlyWire
+            <img src="ng/fwfake.png"><span>FlyWire</span>
         </div>
         <!--<img class='b-slide active center' src="ng/photos-21-3.jpg">-->
         <img class='b-slide active center' src="ng/1.OL.png">
@@ -546,12 +546,7 @@
         <span class="close cursor" onclick="comp.lightbox.close()">&times;</span>
         <div class="modal-content">
 
-            <div class="mySlides">
-                <div class="numbertext">1 / 8</div>
-                <img src="ng/photos-21-3.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
+            <div class="mySlides active">
                 <div class="numbertext">1 / 8</div>
                 <img src="ng/1.OL.png" style="width:100%">
             </div>
@@ -592,8 +587,8 @@
             </div>
 
             <!-- Next/previous controls -->
-            <a class="prev" onclick="back()">&#10094;</a>
-            <a class="next" onclick="fwrd()">&#10095;</a>
+            <a class="prev" onclick="comp.lightbox.prev()">&#10094;</a>
+            <a class="next" onclick="comp.lightbox.next()">&#10095;</a>
 
             <!-- Caption text -->
             <div class="caption-container">
