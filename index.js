@@ -3,7 +3,8 @@ const comp = {
   fs_banner: {
     index: 1,
     auto: () => {
-      if (comp.targets.modal.style.display !== 'block') {
+      if (!(comp.targets.modal.style.display == 'block' ||
+            comp.targets.signup.style.display == 'block')) {
         comp.lightbox.next();
         return window.setTimeout(comp.fs_banner.auto, 7500);
       }
@@ -36,18 +37,29 @@ const comp = {
       /*deactivate old slide, activate new slide */
       const active = comp.targets.active;
       active.classList.remove('active');
-      comp.targets.active = slides[n-1];
+      comp.targets.active = slides[n - 1];
       comp.targets.active.classList.add('active');
       /*deactivate old banner, activate new banner, reset old banner sizing,
        * change new banner to reactive sizing*/
       const bactive = comp.targets.bactive;
       bactive.classList.remove('active');
-      comp.targets.bactive = bslide[n-1];
+      comp.targets.bactive = bslide[n - 1];
       comp.targets.bactive.classList.add('active');
       comp.targets.bactive.style.width = bactive.style.width;
       comp.targets.bactive.style.height = bactive.style.height;
       bactive.style.width = '';
       bactive.style.height = '';
+    }
+  },
+  signup: {
+    open: () => {
+      comp.targets.signup.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    },
+    close: () => {
+      comp.targets.signup.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      window.setTimeout(comp.fs_banner.auto, 2000);
     }
   },
   handlers: {
@@ -72,6 +84,9 @@ const comp = {
         bactive.style.height = '100%';
       }
     },
+    clicksign: () => {
+      comp.signup.close();
+    }
   },
   targets: {
     set: false,
@@ -80,6 +95,8 @@ const comp = {
     banner: document.getElementById('banner'),
     bslide: Array.from(document.getElementsByClassName('b-slide')),
     modal: document.getElementById('myModal'),
+    signup: document.getElementById('signup'),
+    signif: document.getElementById('signup_frame'),
     active: null,
     bactive: null,
   },
@@ -95,4 +112,5 @@ window.onscroll = comp.handlers.scroll;
 window.onresize = comp.handlers.resize;
 comp.set();
 comp.handlers.resize();
+comp.targets.signup.addEventListener('click', comp.handlers.clicksign);
 window.setTimeout(comp.fs_banner.auto, 7000);

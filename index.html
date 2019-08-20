@@ -14,12 +14,12 @@
 <body style='margin: 0px; background:black; color: white'>
     <div id='banner'>
         <div id='logo'>
-            <img src="ng/fwfake.png"><span>FlyWire</span>
+            <img src="ng/logo_text.png" style='max-height: 240px;'>
         </div>
         <!--<img class='b-slide active center' src="ng/photos-21-3.jpg">-->
         <img class='b-slide active center' src="ng/1.OL.png">
         <img class='b-slide center' src="ng/2.PNs.png">
-        <img class='b-slide center' src="ng/3.GF _ GCI.png">
+        <img class='b-slide center' src="ng/3.GF _ GCI4.png">
         <img class='b-slide center' src="ng/4.CX2.png">
         <img class='b-slide center' src="ng/5.MB.png">
         <img class='b-slide center' src="ng/6.PB.png">
@@ -30,6 +30,7 @@
     <div class="header" id="myHeader">
         <h2>My Header</h2>
         <button onclick='comp.lightbox.open()'>Gallery (lol)</button>
+        <button onclick='comp.signup.open()'>Sign Up</button>
     </div>
 
     <div class="content">
@@ -558,7 +559,7 @@
 
             <div class="mySlides">
                 <div class="numbertext">3 / 8</div>
-                <img src="ng/3.GF _ GCI.png" style="width:100%">
+                <img src="ng/3.GF _ GCI4.png" style="width:100%">
             </div>
 
             <div class="mySlides">
@@ -596,6 +597,14 @@
             </div>
         </div>
     </div>
+
+    <div id='signup' class='signup'>
+        <span class="close cursor" onclick="comp.signup.close()">&times;</span>
+        <iframe id="signup_frame" class='center'
+            src="https://docs.google.com/forms/d/e/1FAIpQLSe-SiWxtAM0mCAOtU9SLmJ5Cep-KuggdcBA9NakgyS9sd5Mjg/viewform?embedded=true"
+            width="640" height="1452" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
     <script src="index.js"></script>
     <script>
         var app = new Vue({
