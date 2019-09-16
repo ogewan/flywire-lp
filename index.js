@@ -25,7 +25,7 @@ const comp = {
     next: () => comp.lightbox.show(++comp.lightbox.index),
     prev: () => comp.lightbox.show(--comp.lightbox.index),
     show: (n) => {
-      const slides = comp.targets.slides, max = slides.length,
+      const slides = comp.targets.slides, max = slides.length + 1,
             bslide = comp.targets.bslide;
 
       if (!n) {

@@ -1,31 +1,41 @@
-#logo {
-    position: absolute;
-    /* display: none; */
-    display: flex;
-    align-items: center;
+html {
+  font-size: 14px;
+}
 
-    padding: 20px;
-    background-color: #1c1c1c9c;
-    border: 1px solid #666666;
+.container {
+  max-width: 960px;
+}
+
+#logo {
+  position: absolute;
+  /* display: none; */
+  display: flex;
+  align-items: center;
+
+  padding: 20px;
+  background-color: #1c1c1c9c;
+  border: 1px solid #666666;
 }
 
 #banner {
-    overflow: hidden;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  overflow: hidden;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /**STICKY HEADER**/
-/* Style the header */
+/* Style the header
 .header {
   padding: 10px 16px;
   background: #555;
   color: #f1f1f1;
-}
+} */
 
+.darker {
+  background-color: #1c1c1c9c!important;
+}
 .center {
     display: block;
     margin-left: auto;
@@ -51,11 +61,10 @@
 }
 /**MODAL**/
 /* The Modal (background) */
-.modal, .signup {
+.modal_custom, .signup {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
   left: 0;
   top: 0;
   width: 100%;
@@ -65,7 +74,7 @@
 }
 
 /* Modal Content */
-.modal-content {
+.modal-content_custom {
   position: relative;
   background-color: black;
   margin: auto;
@@ -75,17 +84,18 @@
 }
 
 /* The Close Button */
-.close {
+.cancel {
   color: white;
   position: absolute;
   top: 10px;
   right: 25px;
   font-size: 35px;
   font-weight: bold;
+  z-index: 999;
 }
 
-.close:hover,
-.close:focus {
+.cancel:hover,
+.cancel:focus {
   color: #999;
   text-decoration: none;
   cursor: pointer;
@@ -140,21 +150,41 @@ img.hover-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 /* Fading animation */
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/*.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}*/
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
   }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+}
