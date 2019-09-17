@@ -1,14 +1,14 @@
 {
-    "name": "FlyWire",
-    "short_name": "FlyWire",
+    "name": "",
+    "short_name": "",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=JyBB50xjdd",
+            "src": "/android-chrome-192x192.png?v=eEvvmjXdzk",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=JyBB50xjdd",
+            "src": "/android-chrome-512x512.png?v=eEvvmjXdzk",
             "sizes": "512x512",
             "type": "image/png"
         }
