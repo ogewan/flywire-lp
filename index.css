@@ -34,8 +34,15 @@ html {
 } */
 
 .darker {
-  background-color: #1c1c1c9c!important;
+  background-color: #6d6d6d!important;
 }
+
+.electric {
+  color: #fff;
+  background-color: #0cbddd;
+  border-color: #0cbddd;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -70,6 +77,12 @@ html {
   width: 100vw;
   height: 100vh;
   overflow: auto;
+}
+
+.modal_custom {
+  background-color: #000000;
+}
+.signup {
   background-color: #000000c4;
 }
 
