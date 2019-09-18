@@ -1,5 +1,4 @@
 const comp = {
-  sticky: {},
   fs_banner: {
     index: 0,
     auto: () => {
@@ -64,15 +63,6 @@ const comp = {
     }
   },
   handlers: {
-    scroll: () => {
-      const header = comp.targets.header;
-      const bannerPos = comp.targets.banner.getBoundingClientRect().bottom;
-      if (bannerPos < 0) {
-        header.classList.add('sticky');
-      } else {
-        header.classList.remove('sticky');
-      }
-    },
     resize: () => {
       const vw = window.innerWidth, vh = window.innerHeight,
             bactive = comp.targets.bactive;
@@ -92,7 +82,6 @@ const comp = {
   targets: {
     set: false,
     slides: Array.from(document.getElementsByClassName('slide')),
-    header: document.getElementById('myHeader'),
     banner: document.getElementById('banner'),
     bslide: Array.from(document.getElementsByClassName('b-slide')),
     modal: document.getElementById('myModal'),
@@ -110,16 +99,11 @@ const comp = {
   }
 };
 
-//window.onscroll = comp.handlers.scroll;
 window.onresize = comp.handlers.resize;
 comp.set();
 comp.handlers.resize();
+comp.targets.signup.addEventListener('click', comp.handlers.clicksign);
 document.querySelector('dialog').addEventListener('click', e => {
   e.stopPropagation();
 });
-
-/*document.getElementById('confirmSignup').addEventListener('click', e => {
-  e.stopPropagation();
-});*/
-comp.targets.signup.addEventListener('click', comp.handlers.clicksign);
 window.setTimeout(comp.fs_banner.auto, 7000);

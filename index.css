@@ -8,7 +8,6 @@ html {
 
 #logo {
   position: absolute;
-  /* display: none; */
   display: flex;
   align-items: center;
 
@@ -24,14 +23,6 @@ html {
   align-items: center;
   justify-content: center;
 }
-
-/**STICKY HEADER**/
-/* Style the header
-.header {
-  padding: 10px 16px;
-  background: #555;
-  color: #f1f1f1;
-} */
 
 .darker {
   background-color: #000000!important;
@@ -178,15 +169,6 @@ img.hover-shadow {
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
-/*.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}*/
 
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
