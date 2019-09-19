@@ -63,18 +63,6 @@ const comp = {
     }
   },
   handlers: {
-    resize: () => {
-      const vw = window.innerWidth, vh = window.innerHeight,
-            bactive = comp.targets.bactive;
-
-      if (vw < vh) {
-        bactive.style.width = '100%';
-        bactive.style.height = 'auto';
-      } else {
-        bactive.style.width = 'auto';
-        bactive.style.height = '100%';
-      }
-    },
     clicksign: () => {
       comp.signup.close();
     }
@@ -99,9 +87,7 @@ const comp = {
   }
 };
 
-window.onresize = comp.handlers.resize;
 comp.set();
-comp.handlers.resize();
 comp.targets.signup.addEventListener('click', comp.handlers.clicksign);
 document.querySelector('dialog').addEventListener('click', e => {
   e.stopPropagation();

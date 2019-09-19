@@ -3,7 +3,9 @@ html {
 }
 
 .container {
-  max-width: 960px;
+  max-width: unset;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 #logo {
@@ -18,10 +20,11 @@ html {
 
 #banner {
   overflow: hidden;
-  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .darker {
@@ -118,6 +121,7 @@ html {
 /* Hide the slides by default */
 .slide, .b-slide {
   display: none;
+  width: 100%;
 }
 
 .numbertext {
