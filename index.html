@@ -118,7 +118,13 @@
         <script>
           function onSignIn(googleUser) {
             const signup = document.getElementById('signup_frame');
+            const signupContainer = document.getElementById('signup');
             signup.style.display = '';
+            signup.onload = () => {
+              signup.onload = () => {
+                signupContainer.scrollTop = 0;
+              }
+            };
             signup.src = "https://docs.google.com/forms/d/e/1FAIpQLSe-SiWxtAM0mCAOtU9SLmJ5Cep-KuggdcBA9NakgyS9sd5Mjg/viewform?embedded=true";
             document.querySelector('dialog').close();
           }
