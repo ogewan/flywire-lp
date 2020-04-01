@@ -1,3 +1,32 @@
+{
+  // This is terrible, but the css doesn't keep the alpha
+  const signinbtn = document.querySelector('#signinbtn');
+  const signinimg = document.querySelector('#signinbtn img');
+  const isDark = signinbtn.classList.contains('dark');
+  const btnHandler = e => {
+    let state;
+    switch (e.type) {
+      case 'mouseup':
+      case 'mouseover':
+        state = 'focus';
+        break;
+      case 'mousedown':
+        state = 'pressed';
+        break;
+      default:
+        state = 'normal';
+    }
+    signinimg.src = `./f/google/web/2x/btn_google_signin_${
+        isDark ? 'dark' : 'light'}_${state}_web@2x.png`
+  };
+  signinimg.src =
+      `./f/google/web/2x/btn_google_signin_${isDark ? 'dark' : 'light'}_${
+          signinbtn.disabled ? 'disabled' : 'normal'}_web@2x.png`;
+
+  ['mousedown', 'mouseup', 'mouseover', 'mouseout'].forEach(
+      (s) => signinbtn.addEventListener(s, btnHandler));
+}
+
 const comp = {
   fs_banner: {
     index: 0,
