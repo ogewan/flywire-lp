@@ -221,3 +221,7 @@ img.hover-shadow {
 .google-connect.light.disabled  {
   content: url('./f/google/web/2x/btn_google_signin_light_disabled2_web@2x.png');
 }
+
+.center {
+  text-align: center;
+}
