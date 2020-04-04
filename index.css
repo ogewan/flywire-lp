@@ -197,29 +197,29 @@ img.hover-shadow {
 }
 
 .google-connect.dark {
-  content: url('./f/google/web/2x/btn_google_signin_dark_normal_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_dark_normal_web@2x.png');
 }
 .google-connect.dark:hover {
-  content: url('./f/google/web/2x/btn_google_signin_dark_focus_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_dark_focus_web@2x.png');
 }
 .google-connect.dark:focus {
-  content: url('./f/google/web/2x/btn_google_signin_dark_pressed_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_dark_pressed_web@2x.png');
 }
 .google-connect.dark.disabled {
-  content: url('./f/google/web/2x/btn_google_signin_dark_disabled2_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_dark_disabled2_web@2x.png');
 }
 
 .google-connect.light {
-  content: url('./f/google/web/2x/btn_google_signin_light_normal_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_light_normal_web@2x.png');
 }
 .google-connect.light:hover  {
-  content: url('./f/google/web/2x/btn_google_signin_light_focus_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_light_focus_web@2x.png');
 }
 .google-connect.light:focus  {
-  content: url('./f/google/web/2x/btn_google_signin_light_pressed_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_light_pressed_web@2x.png');
 }
 .google-connect.light.disabled  {
-  content: url('./f/google/web/2x/btn_google_signin_light_disabled2_web@2x.png');
+  content: url('./google/web/2x/btn_google_signin_light_disabled2_web@2x.png');
 }
 
 .center {
