@@ -55,22 +55,25 @@
         Players search for the right pieces and put together beautiful 3D neurons that advance science’s understanding
         of brain
         circuits.</p>
-      <p class="text-center"><input type="checkbox"> I have read and agree to FlyWire’s <a href="tos.html">Terms of
-          Service</a> and <a href="principles.html">Principles</a>.</p>
+      <form id="form"
+        action="https://globalv1.flywire-daf.com/auth/api/v1/authorize?redirect=https://ngl.flywire-daf.com"
+        method="POST">
+        <p class="text-center"><input type="checkbox" name="tos_agree" value="true" onchange="acceptTerms(this)"> I have
+          read and agree to FlyWire’s
+          <a href="tos.html">Terms of
+            Service</a> and <a href="principles.html">Principles</a>.</p>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm p-2"></div>
-          <div class="col-sm p-2 center">
-            <!--<img class="google-connect light disabled"></img>
-            -->
-            <a
-              href="https://globalv1.flywire-daf.com/auth/api/v1/authorize?redirect=https://ngl.flywire.ai/?json_url=https://globalv1.flywire-daf.com/nglstate/api/v1/5645599001018368"><img
-                class="google-connect dark"></img></a>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm p-2"></div>
+            <div class="col-sm p-2 center">
+              <a href="javascript:void(0)" id="submit" class="disabled" onclick="submit()"><img
+                  class="google-connect dark"></img></a>
+            </div>
+            <div class="col-sm p-2"></div>
           </div>
-          <div class="col-sm p-2"></div>
         </div>
-      </div>
+      </form>
       <p class="text-center"><i>FlyWire works best with Chrome.</i></p>
   </div>
 
