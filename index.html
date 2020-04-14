@@ -55,25 +55,28 @@
         Players search for the right pieces and put together beautiful 3D neurons that advance science’s understanding
         of brain
         circuits.</p>
-      <form id="form"
-        action="https://globalv1.flywire-daf.com/auth/api/v1/authorize?redirect=https://ngl.flywire-daf.com"
-        method="POST">
-        <p class="text-center"><input type="checkbox" name="tos_agree" value="true" onchange="acceptTerms(this)"> I have
-          read and agree to FlyWire’s
-          <a href="tos.html">Terms of
-            Service</a> and <a href="principles.html">Principles</a>.</p>
+      <p class="text-center"><input type="checkbox"> I have read and agree to FlyWire’s <a href="tos.html">Terms of
+          Service</a> and <a href="principles.html">Principles</a>.</p>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-sm p-2"></div>
-            <div class="col-sm p-2 center">
-              <a href="javascript:void(0)" id="submit" class="disabled" onclick="submit()"><img
-                  class="google-connect dark"></img></a>
-            </div>
-            <div class="col-sm p-2"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm p-2"></div>
+          <div class="col-sm p-2">
+            <button id="signInBtn" type="button" class="btn btn-lg btn-block electric"
+              onclick='comp.signup.open()'>Apply</button>
           </div>
+          <div class="col-sm p-2"></div>
+          <!--
+          <div class="col-sm p-2">
+          </div>
+          <div class="col-sm p-2">
+            <buttontype="button" class="btn btn-lg btn-block btn-secondary disabled">Coming
+              Soon</button>
+          </div>
+          <div class="col-sm p-2">
+            -->
         </div>
-      </form>
+      </div>
       <p class="text-center"><i>FlyWire works best with Chrome.</i></p>
   </div>
 
