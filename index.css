@@ -195,3 +195,36 @@ img.hover-shadow {
     font-size: 16px;
   }
 }
+
+.google-connect.dark {
+  content: url('./google/web/2x/btn_google_signin_dark_normal_web@2x.png');
+}
+.google-connect.dark:hover {
+  content: url('./google/web/2x/btn_google_signin_dark_focus_web@2x.png');
+}
+.google-connect.dark:focus {
+  content: url('./google/web/2x/btn_google_signin_dark_pressed_web@2x.png');
+}
+a.disabled .google-connect.dark {
+  content: url('./google/web/2x/btn_google_signin_dark_disabled2_web@2x.png');
+}
+
+.google-connect.light {
+  content: url('./google/web/2x/btn_google_signin_light_normal_web@2x.png');
+}
+.google-connect.light:hover  {
+  content: url('./google/web/2x/btn_google_signin_light_focus_web@2x.png');
+}
+.google-connect.light:focus  {
+  content: url('./google/web/2x/btn_google_signin_light_pressed_web@2x.png');
+}
+a.disabled .google-connect.light  {
+  content: url('./google/web/2x/btn_google_signin_light_disabled2_web@2x.png');
+}
+
+.disabled  {
+  pointer-events: none;
+}
+.center {
+  text-align: center;
+}

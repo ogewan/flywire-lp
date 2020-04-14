@@ -1,3 +1,13 @@
+const acceptTerms = e => {
+  const submit = document.getElementById('submit');
+  submit.classList.toggle('disabled', !e.checked);
+};
+
+const submit = () => {
+  const form = document.getElementById('form');
+  form.submit();
+};
+
 const comp = {
   fs_banner: {
     index: 0,
