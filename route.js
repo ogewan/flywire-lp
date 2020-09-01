@@ -4,7 +4,7 @@ if (window.location) {
     virtualPath.shift();
     const virtualURL =
         `https://neuromancer-seung-import.appspot.com/?json_url=https://storage.googleapis.com/flywire_links/${
-            virtualPath.join('/')}.json`;
+            virtualPath.join('/')}.json&public`;
     window.location = virtualURL;
   }
 }
