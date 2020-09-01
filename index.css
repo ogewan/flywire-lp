@@ -232,3 +232,11 @@ a.disabled .google-connect.light  {
 .center {
   text-align: center;
 }
+    
+.boldline {
+  font-weight: bold;
+}
+
+.boldline > * {
+  font-weight: normal;
+}

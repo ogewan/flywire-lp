@@ -2,45 +2,19 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Jekyll v3.8.5">
-  <meta name="google-signin-client_id"
-    content="343912801459-05lb0lupk55iq31r19rl77l9n2k036m0.apps.googleusercontent.com">
-  <meta name="msapplication-TileColor" content="#2b5797">
-  <meta name="theme-color" content="#84c9ff">
-  <title>Support</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="f/apple-touch-icon.png?v=rMJJ5wk4zj">
-  <link rel="icon" type="image/png" sizes="32x32" href="f/favicon-32x32.png?v=rMJJ5wk4zj">
-  <link rel="icon" type="image/png" sizes="16x16" href="f/favicon-16x16.png?v=rMJJ5wk4zj">
-  <link rel="manifest" href="f/site.webmanifest?v=rMJJ5wk4zj">
-  <link rel="mask-icon" href="f/safari-pinned-tab.svg?v=rMJJ5wk4zj" color="#5bbad5">
-  <link rel="shortcut icon" href="f/favicon.ico?v=rMJJ5wk4zj">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-
   <link href="bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#navbar").load("navbar.html");
+      $("head").load("head.html");
+    });
+  </script>
 </head>
 
 <body style='background:black; color: rgb(138, 135, 135)'>
-  <div class="d-flex flex-column flex-md-row p-2 px-md-4 mb-1 darker shadow-sm">
-    <a href='index.html'><img src="ng/logo_text.png" style="height: 100px"></a>
-    <h5 class="my-0 mr-md-auto font-weight-normal"></h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <a class="p-2 text-white"
-        href="https://drive.google.com/file/d/19qtO1U0wF4Ga9_Ruow6yHvRyZxsSG3zn/view?ts=5e822617"
-        target="_blank">Welcome Video</a>
-      <a class="p-2 text-white"
-        href="https://docs.google.com/document/d/1ItdRpMybhx1ebjI41TQZDFIymfruk_GiZu4ztP6f3OM/edit?usp=sharing"
-        target="_blank">Training Materials</a>
-      <a class="p-2 text-white" href="principles.html">FlyWire Principles</a>
-      <a class="p-2 text-white" href="credits.html">Credits</a>
-      <a class="p-2 text-selected" href="support.html">Support</a>
-      <a class="p-2 text-white" href="tos.html">Terms of Service</a>
-    </nav>
-  </div>
+  <span id="navbar"></span>
 
   <div class="container">
     <div class="pt-2 my-md-2 pt-md-1">
