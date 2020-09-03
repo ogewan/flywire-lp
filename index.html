@@ -28,7 +28,7 @@
     <span id="navbar"></span>
     <div class="container">
         <header class="pt-2 my-md-2 pt-md-1">
-            <p class="text-center">FlyWire is a game-like platform open to all, to help crowdsource the first complete
+            <p class="text-center main-text">FlyWire is a game-like platform open to all, to help crowdsource the first complete
                 wiring
                 diagram of a
                 centralized
@@ -37,28 +37,27 @@
                     href="https://www.cell.com/cell/pdf/S0092-8674(18)30787-6.pdf">(Zheng et al. 2018)</a>, we
                 identified pieces
                 of neurons by artificial intelligence.
-                Players search for the right pieces and put together beautiful 3D neurons that advance science’s
+                Players search for the right pieces and put together beautiful 3D neurons that advance science's
                 understanding
                 of brain
                 circuits.</p>
             <form id="form"
                 action="https://globalv1.flywire-daf.com/auth/api/v1/authorize?redirect=https://ngl.flywire.ai"
                 method="POST">
-                <p class="text-center"><input type="checkbox" name="tos_agree" value="true"
-                        onchange="acceptTerms(this)"> I have read and agree to FlyWire’s <a
-                        href="principles.html">Principles</a> and <a href="tos.html">Terms of
-                        Service</a>,
-                    including the use of cookies to maintain user login.</p>
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm p-2"></div>
-                        <div class="col-sm p-2 center">
-                            <a href="javascript:void(0)" id="submit" class="disabled" onclick="submit()"><img
-                                    class="google-connect dark size50"></img></a>
+                <div class="checkbox_group">
+                    <div class="checkbox_container">
+                        <input type="checkbox" name="tos_agree" value="true" onchange="acceptTerms(this)">
+                        <div class="checkbox_lookalike">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                            </svg>
                         </div>
-                        <div class="col-sm p-2"></div>
                     </div>
+                    <label>I have read and agree to FlyWire's <a href="principles.html">Principles</a> and <a href="tos.html">Terms of Service</a>, including the use of cookies to maintain user login.</label>
+                </div>
+
+                <div class="submitContainer">
+                    <a href="javascript:void(0)" id="submit" class="disabled" onclick="submit()"></a>
                 </div>
             </form>
             <p class="text-center"><i>FlyWire works best with Chrome.</i></p>
